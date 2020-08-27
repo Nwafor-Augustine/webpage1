@@ -1,0 +1,257 @@
+body{
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    font-size:10px;
+    font-family: verdana,arial,geneva;
+    color: black;
+    justify-content: center;
+    background-color: gray;
+    flex-direction: column;
+}
+
+
+.hold{
+   align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    
+   
+}
+
+.header_image{
+background: url("3a4f8e6d44c855f.jpg")no-repeat;
+background-size: cover;
+height: 150px;
+display: flex;
+color: green;
+position: relative;
+
+}
+
+.head_writeup{
+position: relative;
+text-align: center;
+line-height: 5px;
+font-size: 20px;
+bottom: 40px;
+color: green;
+
+}
+
+
+.header_image nav ul{
+    list-style: none;
+    display: flex;
+}
+
+
+.header_image nav ul li{
+    margin-right: 10px;
+    
+}
+
+
+
+ ul li:hover{
+color: white;
+}
+
+
+.discription_nav{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2px;
+    flex-direction: row;   
+} 
+
+ 
+
+img{
+    display: flex;
+    width: 100px;
+    height: 200px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn{
+    margin: 5px;
+    border: none;
+    align-self: center;
+    border-radius: 3px;
+}
+
+
+.first{
+   background:url("download (1).jpeg") no-repeat; 
+   width: 200px;
+   height: 200px;
+   background-size: cover;
+margin: 2px;
+
+}
+
+
+.second{
+    background: url("Electronic_circuit.jpg");
+    width: 200px;
+   height: 200px;
+background-size: cover;
+margin-left: 0px;
+
+}
+
+
+.third{
+    display: flex;
+    flex-direction: row;
+    background: url("comment_BtijPW2Y1600abFsqfmYN2y2JqeLZx2k.jpg");
+    background-size: cover;
+    width: 200px;
+   height: 200px;
+   margin-left: 2px;
+   
+   
+}
+
+
+.forth{
+    display: flex;
+    flex-direction: row;
+    background: url("maxresdefault.jpg");
+    background-size: cover;
+    width: 200px;
+   height: 200px;
+   margin-left: 2px;
+  
+   
+}
+
+
+.fifty{
+    display: flex;
+    flex-direction: row;
+    background: url("png-transparent-square-black-logo-integrated-circuits-chips-central-processing-unit-computer-icons-chip-electronics-text-computer.png");
+    background-size: cover;
+    width: 230px;
+   height: 200px;
+   margin-left: 2px;
+ 
+   
+}
+.tag{
+    width: 20px;
+    height: 20px;
+}
+.text-area{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.services{
+display: flex;
+    width:100% ;
+    height: 620px;
+    background:green;
+position: relative;
+margin-top: 1px; 
+
+}
+
+
+ .child{
+    background: white;
+   width: 1311px;
+   height: 615px;
+   position: relative;
+   top: 3px;
+   left: 3px;
+   padding: 0px;
+   display: flex;
+   position: relative;
+}
+
+
+
+.showcase{
+    top: 150px;
+  left: 200px;
+  position: relative;
+}
+.small{
+    width: 400px;
+    height: 300px;
+    background: green;
+    display: flex;
+   flex-direction: column;
+   align-items: center;justify-content: center;
+   position: relative;
+  
+}
+.cell_one{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+  
+}
+.cell_two{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    
+}
+
+
+.image3{
+   width: 400px;
+   margin-right: 10px;
+   height: 200px;
+}
+
+.image1{
+  width: 400px;
+}
+
+.image5{
+  margin-right: 10px;
+    width: 400px;
+}
+
+.image6{
+    width: 400px;
+}
+footer{
+width: 100%;
+height: 216px;
+background: black;
+color: white;
+text-align: center;
+
+}
+.side_view{
+    background: wheat;
+    width: 270px;
+   height: 200px;
+margin-left: 2px;
+text-align: center;
+line-height: 20px;
+}
+.text1{
+    margin: 10px;
+}
+
+
+
+
+
+
+  
+
