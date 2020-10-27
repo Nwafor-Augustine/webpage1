@@ -510,26 +510,6 @@ left: 250px;
 
 
 
-#aside{
-   width: 150px;
-   left: 40px;
-}
-
-
-
-#aside img{
-   width: 150px;
-}
-
-
-
-#aside nav ul{
-   width: 150px;
-}
-
-
-
-
    .getinfo{
       width: 240px;
    }
@@ -554,20 +534,20 @@ left: 250px;
 }
 
 .imgdiv{
-   padding: 10px 60px 0px 80px;
+   padding: 10px 50px 0px 50px;
 }
 
 .about{
-   padding: 0px 90px 0px 80px;
+   padding: 0px 50px 0px 50px;
    font-size: 14px;
    letter-spacing: .20px;
 
 }
 .skills{
-   padding: 10px 90px 0px 70px;
+   padding: 10px 50px 0px 50px;
 }
 .contact{
-   padding: 10px 90px 0px 50px;
+   padding: 10px 50px 0px 50px;
 }
 
 }
