@@ -1,22 +1,42 @@
 
-var checkscreen1 = window.matchMedia("(max-width:480px)");
-if (checkscreen1.matches) {
+function phone() {
+    var mychange = window.matchMedia("(max-width:600px)");
     var navdisplay = document.getElementById("aside");
     var labelshow = document.getElementById("cancel");
     var bar = document.getElementById("bar");
     var menucheck = document.getElementById("menunav");
-    menucheck.addEventListener('change', function () {
+    menucheck.addEventListener("change", function () {
         if (menucheck.checked) {
-            bar.style.left = "-2250px";
-            navdisplay.style.left = "10px";
-            labelshow.style.display = "block"
+            navdisplay.classList.add("aside");
         } else {
-            navdisplay.style.left = "-250px";
-            bar.style.left = "85%";
-            labelshow.style.display = "none";
+            navdisplay.classList.remove("aside");
         }
-    })
+
+    });
 }
+
+
+phone();
+
+if (
+    document.getElementById("submit").onclick = function () {
+        document.getElementById("personal").style.display = "block";
+
+    }
+
+) {
+    document.getElementById("submit1").onclick = function () {
+        document.getElementById("personal").style.display = "none";
+
+    }
+}
+
+
+
+
+
+
+
 
 
 

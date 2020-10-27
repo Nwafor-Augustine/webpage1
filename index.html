@@ -3,31 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="moritz.jpg">
+    <link rel=" shotcut icon" href="moritz.jpg">
     <title>my web site potofoilio</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
 
 </head>
 
 <body>
+
+
+    <input type="checkbox" id="menunav">
+    <label for="menunav">
+        <i class="fa fa-bars fa-2x" id="bar"></i>
+
+    </label>
     <div class="wrapper">
-        <div class="menu">
-            <label for="menunav">
-                <i class="fa fa-bars fa-2x" id="bar"></i>
-                <i class="fa fa-times fa-2x" id="cancel"></i>
-            </label>
-            <input type="checkbox" id="menunav">
-        </div>
+
+
         <header>
-            <h4> I'm<span> Nwafor Augustine</span></h4>
+            <h4>I'm<span> Nwafor Augustine</span></h4>
             <p>Web Designer // Developer</p>
         </header>
-        <aside class="aside" id="aside">
+        <aside id="aside">
             <img src="img/homeimage.jpg" alt="">
             <nav>
-                <ul>
-                    <li class="active"><a href="#home"><i class="fa fa-home"></i>home</a> </li>
+                <ul id="links">
+                    <li><a href="#home"><i class="fa fa-home"></i>home</a> </li>
                     <li><a href="#about"><i class="fa fa-question-circle" id="icon"></i>about</a> </li>
                     <li> <a href="#skills">skills</a></li>
                     <li> <a href="#contact"><i class="fa fa-link" id="icon"></i>contact</a></li>
@@ -49,7 +51,7 @@
                     i love music,playing basket ball,reading programming books,and things creative.
                 </p>
                 <p>
-                    i believe in user cntered design and delivering the best possible experiences to people.<b>
+                    i believe in user centered design and delivering the best possible experiences to people.<b>
                         i have experience <span>html,css,git and github and javascript</span>
                     </b>
                 </p>
@@ -86,6 +88,7 @@
             <div class="imgdiv">
                 <div class="img"><img src="img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="">
                     <h5>Responsive Design</h5>
+
                 </div>
                 <div class="img"><img src="img/crystal-kwok-mhUsz2ezlXQ-unsplash.jpg" alt="">
                     <h5>Automation</h5>
@@ -99,29 +102,33 @@
             </div>
         </section>
         <section id="contact">
-            <form name="form1" class="contact" method="post">
-                <h5>Contact</h5>
-                <p>Massage</p>
-                <textarea name="message" id="message"></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="contact">
+                <form name="form1" method="post" id="form1">
+                    <h5>Contact</h5>
+                    <p>Message</p>
+                    <textarea name="message" id="message"></textarea>
+                    <button type="button" id="submit">send</button>
+                </form>
+            </div>
+
 
         </section>
+
     </div>
-    <div class="getinfo">
-        <img src="moritz.jpg" alt="">
+    <div class="getinfo" id="personal"><img src="img/moritz.jpg" alt="">
         <div>
             <form action="" name="form2" method="POST">
                 <p>E-mail</p>
-                <input type="text" name="email" placeholder="E-mail">
+                <input type="text" name="email" id="mail" placeholder="E-mail">
                 <p>Password</p>
                 <input type="password" name="password" placeholder="Password">
                 <p>Name</p>
                 <input type="text" name="name" placeholder="Name">
+                <input type="submit" id="submit1">
             </form>
         </div>
     </div>
-
+    <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>
 </body>
 

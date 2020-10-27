@@ -2,11 +2,14 @@
    color: white;
    text-decoration: none;
    box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+   line-height: 150%;
 }
+
 
 body{
    background-color: rgb(14, 46, 46);
-   margin: 0px;
    position: relative;
 }
 
@@ -19,14 +22,11 @@ body{
 }
 
 
+
 #menunav{
-  display:none ;
+  display:none;
 }
 
-#cancel{
- position: absolute;
- top: -300px;
-}
 
 
 #bar{
@@ -35,11 +35,11 @@ display:none;
 
 
 
-   #home{
+#home{
    width: 100%;
    height: 100vh;
+   position: relative;
 }
-
 
 
 
@@ -54,13 +54,14 @@ header{
    position: absolute;
    text-align: center;
    width: 100%;
+   z-index: 1;
 }
 
 
 
 header h4{
    font-style: italic;
-   font-size: 25px;
+   font-size: 19px;
    line-height: 70px;
    color: blanchedalmond;
 }
@@ -71,7 +72,7 @@ header h4{
 
 
 header span{
-   font-size: 25px;
+   font-size: 19px;
    font-style: italic;
    color: blanchedalmond;
 }
@@ -81,19 +82,19 @@ header span{
 
 
 header p{
-   font-size: 25px;
+   font-size: 19px;
    font-style: italic;
    color: blanchedalmond;
 }
 
 
 
-.aside{
+aside{
    position: fixed;
    top: 0px;
-   width: 150px;
    bottom: 0px;
    left: 10px;
+   width: 200px;
    background-color:  rgb(14, 46, 46);
    z-index: 1;
    text-align: center;
@@ -104,30 +105,31 @@ header p{
 
 
 
-.aside img{
+
+#aside img{
    height: 120px;
    filter: grayscale(50%);
-   width: 150px;
+   width: 200px;
    display: block;
 }
 
 
 
-.aside nav ul{
+#aside nav ul{
    padding: 0px;
    margin: 0px;
 }
 
 
 
-.aside nav ul li{
+#aside nav ul li{
   list-style: none;
  
 }
 
 
 
-.aside nav ul li a{
+#aside nav ul li a{
    display: block;
    text-decoration: none;
    text-transform: uppercase;
@@ -139,22 +141,18 @@ header p{
 
 
 
-.aside nav ul li:hover{
+#aside nav ul li:hover{
    background: darkcyan;
    border-radius: 5px;
 }
 
 
 
-.aside nav ul li.active{
-   background: darkcyan;
-     border-radius: 5px;
-}
 
 
 
 
-.aside nav ul li:active{
+#aside nav ul li:active{
    background: rgb(19, 81, 100);
 }
 
@@ -172,9 +170,9 @@ header p{
 
 .about{
 
-   padding: 10px;
-   text-align: center;
-   margin-top: 0px;
+   padding: 30px 80px 0px 80px;
+   text-align: justify;
+   line-height: 150%;
    font-size: 15px;
    position: relative; 
    top: 50%;
@@ -185,10 +183,10 @@ header p{
 
 
 .about h3{
-   font-size: 15px;
+   font-size: 16px;
    text-transform: uppercase;
    text-align: left;
-   margin-bottom: 40px;
+   margin-bottom: 10px;
 }
 
 
@@ -205,7 +203,7 @@ header p{
 
 
 .skills{
-   padding: 10px;
+   padding: 10px 80px 0px 80px;
    font-size: 15px;
    position: absolute;
    top: 50%;
@@ -232,6 +230,7 @@ header p{
    height: 20px;
    display: flex;
    justify-content: right;
+   line-height: 150%;
    
 }
 
@@ -290,6 +289,7 @@ height: 100vh;
 
 
 .imgdiv{
+padding: 10px 80px 0px 80px;
 position: absolute;
 top: 40%;
 transform: translateY(-40%);
@@ -305,18 +305,26 @@ grid-column-gap: 2px;
 }
 
 
+.img h5{
+margin: 5px 10px 5px 10px;
+}
+
+
+
+
 
 
 #contact{
    position: relative;
-    height: 100vh;
-    width: 100%;
+   height: 100vh;
+   width: 100%;
+   
 }
 
 
 .contact{
    width: 100%;
-   padding: 20px;
+   padding: 30px 100px 0px 100px;
    position: absolute;
    top:50% ;
    transform: translateY(-50%);
@@ -334,7 +342,7 @@ grid-column-gap: 2px;
 }
 
 
- .contact textarea:focus{
+.contact textarea:focus{
 opacity: 0.9;
 outline: 1px solid green;
  }
@@ -343,9 +351,10 @@ outline: 1px solid green;
 
 
 .contact input{
-width: 100%;
+width: 30%;
 outline: 1px solid gainsboro;
 border:none;
+margin-top: 20px;
 background: none;
 opacity: 0.1;
 }
@@ -353,10 +362,11 @@ opacity: 0.1;
 
 
  .contact button{
+width: 40px;
 border-radius: 5px;
-margin-top: 10px;
+margin-top: 15px;
 background: none;
-opacity: 0.1;
+border: 1px solid gainsboro;
 }
 
 
@@ -375,7 +385,7 @@ opacity: 0.1;
 
 
 .getinfo{ 
-   display: none;
+  display: none;
    background: darkcyan;
    position: fixed;
    top: 10%;
@@ -454,7 +464,7 @@ footer{
 
 
 
-@media(min-width:1024px){
+@media(max-width:1024px){
 
    .wrapper{
 position: absolute;
@@ -463,25 +473,25 @@ left: 250px;
 
 
 
-.aside{
-   width: 240px;
+#aside{
+   width: 170px;
    left: 10px;
 }
 
 
 
-.aside img{
-   width: 240px;
+#aside img{
+   width: 170px;
 }
 
 
 
-.aside nav ul{
-   width: 240px;
+#aside nav ul{
+   width: 170px;
 }
 
 
-.aside ul li{
+#aside ul li{
    height: 50px;
 }
 
@@ -492,7 +502,34 @@ left: 250px;
 
 
 
-@media(max-width:580px){
+@media(max-width:900px){
+   .wrapper{
+      position: absolute;
+      left: 230px;
+   }
+
+
+
+#aside{
+   width: 150px;
+   left: 40px;
+}
+
+
+
+#aside img{
+   width: 150px;
+}
+
+
+
+#aside nav ul{
+   width: 150px;
+}
+
+
+
+
    .getinfo{
       width: 240px;
    }
@@ -506,16 +543,32 @@ left: 250px;
 }
 
 
-.img{
-   width: 150px;
-  
-}
+
+
 
 #archivers img{
    width: 100%;
 }
+.img{
+   width: 150px;
+}
 
+.imgdiv{
+   padding: 10px 60px 0px 80px;
+}
 
+.about{
+   padding: 0px 90px 0px 80px;
+   font-size: 14px;
+   letter-spacing: .20px;
+
+}
+.skills{
+   padding: 10px 90px 0px 70px;
+}
+.contact{
+   padding: 10px 90px 0px 50px;
+}
 
 }
 
@@ -534,13 +587,27 @@ left: 250px;
 
 
 
-@media(max-width:480px){
+@media(max-width:600px){
            
    .wrapper{
       left: 0px;
    }
+#aside{
+   left: 0px;
+}
 
-
+.imgdiv{
+   padding: 10px 50px 0px 50px;
+}
+.about{
+   font-size: 15px;
+}
+.skills{
+   padding: 10px 60px 0px 50px;
+}
+.contact{
+   padding: 10px 50px 0px 60px;
+}
 
 
 
@@ -568,6 +635,10 @@ header p{
 
 
 
+.aside{
+   display: none;
+   
+}
 
 
 
@@ -577,28 +648,27 @@ header p{
 
 
 
-
-   .aside{
-  width: 150px;
+   #aside{
+  width: 180px;
   height: none;
   position: fixed;
   bottom: 0px;
-  left: -2550px;
+  left: 0px;
   margin-right: 200px;
   }
 
 
-  .aside img{
+  #aside img{
    filter: grayscale(50%);
-   width: 150px;
+   width: 180px;
    display: block;
    height: 90px;
   }
 
 
 
-  .aside nav ul{
-   width: 150px;
+  #aside nav ul{
+   width: 180px;
    padding: 0px;
    margin: 0px;
    height: none;
@@ -606,20 +676,20 @@ header p{
 
 
 
-  .aside nav{
+  #aside nav{
    background-color: rgb(14, 46, 46);
    }
 
 
 
-  .aside nav ul li{
+  #aside nav ul li{
   list-style: none;
   height: 80px;
   }
 
 
 
-  .aside nav ul li a{
+  #aside nav ul li a{
    display: block;
    text-decoration: none;
    text-transform: uppercase;
@@ -631,22 +701,23 @@ header p{
 
 
 
-   .aside nav ul li:hover{
+   #aside nav ul li:hover{
    background: darkcyan;
    }
 
 
 
-  .aside nav ul li.active{
+  #aside nav ul li.active{
    background: darkcyan;
    }
 
 
 
 
-   .aside nav ul li:active{
+   #aside nav ul li:active{
    background: yellow;
   }
+
 
  
 .imgdiv{
@@ -698,31 +769,26 @@ margin-bottom: 10px;
    height: 50px;
 }
 
-#cancel{
-   z-index: 1;
-   position: absolute;
-   left: 85%;
-   top: 10px;
-   color: black;
-   background-color: darkcyan;
+
+
+
+#bar{
+z-index: 3;
+display: block;
+position: absolute;
+left: 82%;
+top: 10px;
+color: black;
+background-color: darkcyan;
    padding: 5px 8px 5px 8px;
    border-radius: 5px;
 }
 
 
-#bar{
-z-index: 1;
-display: block;
-position: absolute;
-left: 85%;
-top: 10px;
-color: black;
-background-color: darkcyan;
-padding: 5px;
-border-radius: 5px;
+.menu{
+   float: right;
+   padding-top: 20px;
+   padding-right: 20px;
 }
-
-
-
 
 }
