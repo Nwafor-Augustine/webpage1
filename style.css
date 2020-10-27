@@ -55,6 +55,7 @@ header{
    text-align: center;
    width: 100%;
    z-index: 1;
+   padding-top: 50px ;
 }
 
 
@@ -62,7 +63,6 @@ header{
 header h4{
    font-style: italic;
    font-size: 19px;
-   line-height: 70px;
    color: blanchedalmond;
 }
 
