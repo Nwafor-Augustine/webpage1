@@ -18,6 +18,7 @@ function phone() {
 
 phone();
 
+
 if (
     document.getElementById("submit").onclick = function () {
         document.getElementById("personal").style.display = "block";
@@ -30,6 +31,10 @@ if (
 
     }
 }
+
+
+
+
 
 
 
