@@ -1,0 +1,51 @@
+.slide1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+}
+
+.slide1 .description {
+  position: relative;
+  z-index: 100;
+  top: 50vh;
+  padding-left: 1.875rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-right: 1.875rem;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main header {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 100;
+  background-color: pink;
+}
+
+main header .logo img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-top: 7px;
+  background-color: #f79aa9;
+}
+
+main header .logo span {
+  color: #86fce8;
+}
+
+@media (max-width: 300px) {
+  main header .logo span {
+    font-size: 20px;
+  }
+}
