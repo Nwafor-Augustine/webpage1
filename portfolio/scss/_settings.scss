@@ -21,3 +21,9 @@
 	margin-bottom: $bottom + $prefix;
 	margin-right: $right + $prefix;
 }
+
+@mixin mobile($size) {
+	@media (min-width: $size+px) {
+		@content;
+	}
+}

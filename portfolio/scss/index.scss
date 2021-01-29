@@ -2,11 +2,6 @@
 @import 'homeslider1';
 @import 'variables';
 
-@mixin mobile {
-	@media (max-width: 300px) {
-		@content;
-	}
-}
 main {
 	@include size(100vw, 100vh);
 	header {
@@ -24,8 +19,8 @@ main {
 			}
 			span {
 				color: rgb(134, 252, 232);
-				@include mobile {
-					font-size: 20px;
+				@include mobile(300) {
+					font-size: 15px;
 				}
 			}
 		}

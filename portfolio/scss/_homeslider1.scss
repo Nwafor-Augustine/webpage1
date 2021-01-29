@@ -13,6 +13,19 @@
 		position: relative;
 		z-index: 100;
 		top: 50vh;
+		color: white;
+		p {
+			@include mobile(300) {
+				font-size: 20px;
+				@include padding(0, 20, 0, 20, rem);
+			}
+		}
 		@include padding(0, 30, 0, 30, rem);
+		button {
+			background-color: $primary-textcolor;
+			@include size(100px, 60px);
+			color: $btncolor;
+			margin-left: auto;
+		}
 	}
 }
