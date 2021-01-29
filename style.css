@@ -170,7 +170,7 @@ aside{
 
 .about{
 
-   padding: 30px 160px 0px 80px;
+   padding: 30px 80px 0px 80px;
    text-align: justify;
    line-height: 150%;
    font-size: 15px;
@@ -203,7 +203,7 @@ aside{
 
 
 .skills{
-   padding: 10px 160px 0px 80px;
+   padding: 10px 80px 0px 80px;
    font-size: 15px;
    position: absolute;
    top: 50%;
@@ -324,7 +324,7 @@ margin: 5px 10px 5px 10px;
 
 .contact{
    width: 100%;
-   padding: 30px 160px 0px 100px;
+   padding: 30px 100px 0px 100px;
    position: absolute;
    top:50% ;
    transform: translateY(-50%);
