@@ -1,0 +1,23 @@
+@mixin size($width, $heigth) {
+	width: $width;
+	height: $heigth;
+}
+
+@function fontSize($size, $prefix) {
+	$size: $size/16;
+	@return (font-size: $size + $prefix);
+}
+
+@mixin padding($top, $right, $bottom, $left, $prefix) {
+	padding-left: $left/16 + $prefix;
+	padding-top: $top/16 + $prefix;
+	padding-bottom: $bottom/16 + $prefix;
+	padding-right: $right/16 + $prefix;
+}
+
+@mixin marginSet($top, $right, $bottom, $left, $prefix) {
+	margin-left: $left + $prefix;
+	margin-top: $top + $prefix;
+	margin-bottom: $bottom + $prefix;
+	margin-right: $right + $prefix;
+}
