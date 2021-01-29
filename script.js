@@ -14,9 +14,19 @@ function phone() {
 
     });
 }
+new fullpage('#fullpage', {
+    navigation: true,
+    autoScrolling: true,
 
+
+});
 
 phone();
+var menuLink = $("#links")
+console.log(menuLink)
+
+
+
 
 
 if (

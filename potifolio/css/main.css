@@ -1,0 +1,124 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper .slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .slide .slide1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/potifolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper .slide .slide1 .blur {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 0;
+}
+
+.wrapper .slide .slide1 header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: pink;
+  z-index: 100;
+}
+
+.wrapper .slide .slide1 header .logo {
+  height: 50px;
+}
+
+.wrapper .slide .slide1 header .logo img {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  background-color: #e79eac;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.wrapper .slide .slide1 header .logo span {
+  color: white;
+}
+
+.wrapper .slide .slide1 header .nav {
+  height: 50px;
+  padding: 1% 0%;
+}
+
+.wrapper .slide .slide1 header .nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.wrapper .slide .slide1 header .nav ul li {
+  list-style: none;
+}
+
+.wrapper .slide .slide1 header .nav ul a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 3%;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.wrapper .slide .slide1 header .profile img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.wrapper .slide .slide1 .description {
+  position: relative;
+  z-index: 100;
+  color: white;
+  font-size: 2.8125rem;
+  padding-left: 2.5rem;
+  padding-top: 3.125rem;
+  padding-bottom: 0rem;
+  padding-right: 0rem;
+}
+
+.wrapper .slide .slide2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+}
+
+.wrapper .slide .slide3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.pagefeature {
+  width: 100vw;
+  height: 100vh;
+}
+
+.link_item.active {
+  background-color: #e79eac;
+  border-radius: 5px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+@mixin position($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin size($width, $heigth) {
+	width: $width;
+	height: $heigth;
+}
+
+@mixin fontSize($size, $prefix) {
+	font-size: $size/16 + $prefix;
+}
+
+@mixin padding($top, $right, $bottom, $left, $prefix) {
+	padding-left: $left/16 + $prefix;
+	padding-top: $top/16 + $prefix;
+	padding-bottom: $bottom/16 + $prefix;
+	padding-right: $right/16 + $prefix;
+}

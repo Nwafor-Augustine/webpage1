@@ -1,0 +1,100 @@
+@import '_functions';
+$bgcolor: pink;
+$primarycolor: rgb(231, 158, 172);
+
+.wrapper {
+	@include position(100vw, 100vh);
+	overflow: hidden;
+
+	.slide {
+		position: relative;
+		@include position(100%, 100%);
+		.slide1 {
+			position: absolute;
+			@include position(100%, 100%);
+			background-image: url(/potifolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			.blur {
+				@include position(100%, 100%);
+				background-color: black;
+				opacity: 0.6;
+				position: absolute;
+				z-index: 0;
+			}
+
+			header {
+				position: relative;
+				@include size(100%, 50px);
+				background-color: $bgcolor;
+				z-index: 100;
+				.logo {
+					height: 50px;
+					img {
+						width: 45px;
+						height: 45px;
+						padding: 10px;
+						background-color: $primarycolor;
+						border-radius: 50%;
+						margin-top: 2px;
+					}
+					$primarycolor: white;
+					span {
+						color: $primarycolor;
+					}
+				}
+
+				.nav {
+					height: 50px;
+					padding: 1% 0%;
+					ul {
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+						li {
+							list-style: none;
+						}
+
+						a {
+							display: block;
+							text-decoration: none;
+							text-align: center;
+							color: white;
+							padding: 3%;
+							font-size: 0.8rem;
+							width: 100%;
+							margin-right: 10px;
+						}
+					}
+				}
+				.profile {
+					img {
+						width: 25px;
+						height: 25px;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			.description {
+				position: relative;
+				z-index: 100;
+				color: white;
+				@include fontSize(45, rem);
+				@include padding(50, 0, 0, 40, rem);
+			}
+		}
+
+		.slide2 {
+			position: absolute;
+			@include position(100%, 100%);
+			background-color: pink;
+		}
+
+		.slide3 {
+			position: absolute;
+			@include position(100%, 100%);
+		}
+	}
+}
