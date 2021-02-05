@@ -1,0 +1,28 @@
+@import 'settings';
+
+.profile {
+	@include padding(30, 0, 5, 0, rem);
+	img {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+
+		@include mobile(100) {
+			float: right;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.fa.fa-bell {
+		float: right;
+		padding-top: 5px;
+		color: $btncolor;
+		font-weight: 900;
+	}
+
+	.fab.fa-github {
+		float: right;
+		padding-top: 5px;
+		color: $btncolor;
+	}
+}

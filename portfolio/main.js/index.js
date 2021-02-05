@@ -8,10 +8,17 @@ let listItem = document.querySelectorAll(".link_item")
 let links2 = document.querySelector(".link2")
 let listItem2 = document.querySelectorAll(".link_item2")
 const subTitle = document.querySelector(".subtitle")
+let animate_btn = document.querySelector(".animate_btn")
 let currentpage = 0;
-console.log(listItem)
-console.log(btn)
-console.log()
+ 
+ 
+
+
+//menu bar
+
+
+
+
 
 
 // position sliders
@@ -77,8 +84,16 @@ function decreaseSlide() {
     let check = showslide(sliderwrapper, currentpage)
 }
 
+//btn event handler
 
 btn.addEventListener("click", increaseSlide)
+
+//animate button
+
+setInterval(() => {
+    animate_btn.classList.toggle("shift");
+},1000)
+
 // btn2.addEventListener("click", increaseSlide)
 // btn3.addEventListener("click", decreaseSlide)
 

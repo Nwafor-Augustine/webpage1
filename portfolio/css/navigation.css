@@ -34,12 +34,8 @@
   width: 100px;
   height: 60px;
   color: #86fce8;
-  margin-left: auto;
 }
 
-nav {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  opacity: 0.5;
+.nav {
+  background-color: red;
 }

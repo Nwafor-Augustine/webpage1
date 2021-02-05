@@ -27,3 +27,18 @@
 		@content;
 	}
 }
+
+@mixin animate($type, $duration, $timing_func) {
+	animation-name: $type;
+	animation-duration: $duration;
+	animation-timing-function: $timing_func;
+}
+
+@keyframes btn_animate {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(70%);
+	}
+}
