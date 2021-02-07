@@ -479,8 +479,8 @@
   background-color: #f3f3f3;
 }
 
-.skill .skills_features .color {
-  background-color: #0a7a85;
+.skill .skills_features table {
+  color: #0a7a85;
 }
 
 .skill .skills_features .outerstar {
@@ -491,6 +491,7 @@
   content: '\f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
+  color: black;
 }
 
 .skill .skills_features .innerstar {
@@ -505,7 +506,7 @@
   content: '\f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: #93e4eb;
+  color: yellow;
 }
 
 main header {
@@ -585,6 +586,10 @@ main header .logo .menu_icon {
   main header .logo .menu_icon {
     display: none;
   }
+}
+
+main header .logo .menu_icon:hover {
+  cursor: pointer;
 }
 
 main .slider_wrapper {

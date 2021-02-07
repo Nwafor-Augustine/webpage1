@@ -54,6 +54,9 @@ main {
 				@include mobile(1000) {
 					display: none;
 				}
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 	}
