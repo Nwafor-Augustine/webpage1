@@ -2,7 +2,7 @@
 @import 'variables';
 
 .slide1 {
-	@include size(100vw, 100vh);
+	@include size(100%, 100%);
 	background-image: url('/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -24,6 +24,9 @@
 		z-index: 100;
 		top: 40vh;
 		color: white;
+		@include mobile(769) {
+			padding-left: 40px;
+		}
 
 		p {
 			@include mobile(300) {
@@ -42,16 +45,9 @@
 				border: none;
 				padding: 10px;
 				text-align: center;
-			}
-			&:before {
-				content: '\f002';
-				font-weight: 900;
-				font-family: 'Font Awesome 5 Free';
-				position: absolute;
-				left: 65%;
-				top: 60%;
-				color: $primary-color1;
-				z-index: 1;
+				@include mobile(769) {
+					width: 50%;
+				}
 			}
 
 			&::after {
@@ -62,6 +58,9 @@
 				}
 				height: 50px;
 				background-color: $btncolor;
+				@include mobile(769) {
+					width: 19%;
+				}
 			}
 		}
 
@@ -73,6 +72,11 @@
 				left: 50%;
 				top: 25vh;
 				transform: translateX(-50%);
+				@include mobile(769) {
+					top: 35vh;
+					left: -10%;
+					transform: translateX(-10%);
+				}
 			}
 		}
 

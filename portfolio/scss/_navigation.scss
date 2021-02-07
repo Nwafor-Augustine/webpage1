@@ -2,23 +2,57 @@
 @import 'homeslider1';
 @import 'variables';
 
-nav {
-	display: none;
-	width: 240px;
-	min-height: 50%;
-	background-color: $primary-color;
-	position: absolute;
-	@include marginSet(2, 10, 0, 0, rem);
-	padding-top: 25px;
-	z-index: 100;
-
+.nav_container {
 	ul {
+		display: none;
+		padding-top: 30px;
+
+		@include mobile(1000) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		&:hover {
+			color: white;
+		}
+		@include mobile(1000) {
+			@include padding(5, 15, 5, 15, rem);
+		}
+	}
+	.active {
+		background-color: $btncolor;
+		@include mobile(1000) {
+			border-radius: 3%;
+		}
+		@include animate(shownav, 0.1s, ease-out);
+	}
+}
+
+.nav_container.nav_active {
+	ul {
+		display: block;
+		width: 240px;
+		min-height: 50vh;
+		background-color: $primary-color;
+		position: absolute;
+		@include marginSet(2, 10, 0, 0, rem);
+		z-index: 100;
+		@include animate(shownav, 0.6s, ease-out);
 		text-align: center;
 		padding: 0px;
 	}
 
-	ul li {
+	li {
 		list-style: none;
+		@include animate(shownav, 0.6s, ease-out);
 	}
 
 	a {
@@ -26,6 +60,6 @@ nav {
 		display: block;
 		text-decoration: none;
 		color: white;
-		@include padding(0, 0, 20, 0, rem);
+		@include padding(5, 0, 5, 0, rem);
 	}
 }

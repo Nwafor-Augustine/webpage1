@@ -1,11 +1,11 @@
 @import 'settings';
 @import 'homeslider1';
+@import 'homeslider2';
 @import 'variables';
 @import 'navigation';
 @import 'profile';
-
+@import 'skills_page';
 main {
-	@include size(100vw, 100vh);
 	header {
 		@include size(100vw, 10vh);
 		z-index: 100;
@@ -14,33 +14,57 @@ main {
 			position: fixed;
 		}
 		.logo {
-			@include padding(10, 0, 6, 10, rem);
+			@include padding(15, 0, 6, 2, rem);
+
+			@include mobile(320) {
+				padding-top: 1rem;
+			}
+			@include mobile(375) {
+				padding-top: 0.9rem;
+			}
+
 			img {
-				@include size(40px, 40px);
+				@include size(30px, 30px);
 				padding: 5px;
 				border-radius: 50%;
 				background-color: $primary-color1;
+
+				@include mobile(375) {
+					@include size(40px, 40px);
+				}
 			}
 			span {
 				color: rgb(134, 252, 232);
-				@include mobile(300) {
-					font-size: 20px;
-					color: white;
+				font-size: 15px;
+
+				@include mobile(375) {
+					font-size: 18px;
 				}
 				@include mobile(900) {
-					span &::after {
-						content: '\f0c9';
-						font-weight: 900;
-						font-family: 'Font Awesome 5 Free';
-						float: right;
-						color: white;
-						@include marginSet(0.5, 0.6, 0, 0, rem);
-						@include padding(4, 8, 4, 8, rem);
-						background-color: $btncolor;
-						border-radius: 5%;
-					}
+				}
+			}
+
+			.menu_icon {
+				float: right;
+				color: $primary-color;
+				@include marginSet(0.5, 0.6, 0, 0, rem);
+				@include padding(4, 8, 4, 8, rem);
+				background-color: $btncolor;
+				border-radius: 5%;
+				@include mobile(1000) {
+					display: none;
 				}
 			}
 		}
+	}
+	.slider_wrapper {
+		overflow-x: hidden;
+		@include size(100vw, 100vh);
+	}
+	.slide {
+		@include size(100vw, 10vh);
+		position: relative;
+		width: 100vw;
+		height: 100vh;
 	}
 }

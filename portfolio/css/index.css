@@ -7,6 +7,17 @@
   }
 }
 
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes btn_animate {
   from {
     transform: translateX(0%);
@@ -16,9 +27,20 @@
   }
 }
 
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 .slide1 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,6 +65,12 @@
   color: white;
 }
 
+@media (min-width: 769px) {
+  .slide1 .description {
+    padding-left: 40px;
+  }
+}
+
 @media (min-width: 300px) {
   .slide1 .description p {
     font-size: 18px;
@@ -64,15 +92,10 @@
   text-align: center;
 }
 
-.slide1 .description .more_inform:before {
-  content: '\f002';
-  font-weight: 900;
-  font-family: 'Font Awesome 5 Free';
-  position: absolute;
-  left: 65%;
-  top: 60%;
-  color: #929d9e;
-  z-index: 1;
+@media (min-width: 769px) {
+  .slide1 .description .more_inform input {
+    width: 50%;
+  }
 }
 
 .slide1 .description .more_inform::after {
@@ -88,6 +111,12 @@
   }
 }
 
+@media (min-width: 769px) {
+  .slide1 .description .more_inform::after {
+    width: 19%;
+  }
+}
+
 .slide1 .description .navigation_button {
   position: relative;
 }
@@ -98,6 +127,14 @@
   left: 50%;
   top: 25vh;
   transform: translateX(-50%);
+}
+
+@media (min-width: 769px) {
+  .slide1 .description .navigation_button span {
+    top: 35vh;
+    left: -10%;
+    transform: translateX(-10%);
+  }
 }
 
 .slide1 .description button {
@@ -113,6 +150,13 @@
   animation-timing-function: ease-out;
 }
 
+.slide2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #929d9e;
+}
+
 @keyframes btn_animate {
   from {
     transform: translateX(0%);
@@ -122,18 +166,40 @@
   }
 }
 
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes btn_animate {
   from {
     transform: translateX(0%);
   }
   to {
     transform: translateX(70%);
+  }
+}
+
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
 .slide1 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -158,6 +224,12 @@
   color: white;
 }
 
+@media (min-width: 769px) {
+  .slide1 .description {
+    padding-left: 40px;
+  }
+}
+
 @media (min-width: 300px) {
   .slide1 .description p {
     font-size: 18px;
@@ -179,15 +251,10 @@
   text-align: center;
 }
 
-.slide1 .description .more_inform:before {
-  content: '\f002';
-  font-weight: 900;
-  font-family: 'Font Awesome 5 Free';
-  position: absolute;
-  left: 65%;
-  top: 60%;
-  color: #929d9e;
-  z-index: 1;
+@media (min-width: 769px) {
+  .slide1 .description .more_inform input {
+    width: 50%;
+  }
 }
 
 .slide1 .description .more_inform::after {
@@ -203,6 +270,12 @@
   }
 }
 
+@media (min-width: 769px) {
+  .slide1 .description .more_inform::after {
+    width: 19%;
+  }
+}
+
 .slide1 .description .navigation_button {
   position: relative;
 }
@@ -213,6 +286,14 @@
   left: 50%;
   top: 25vh;
   transform: translateX(-50%);
+}
+
+@media (min-width: 769px) {
+  .slide1 .description .navigation_button span {
+    top: 35vh;
+    left: -10%;
+    transform: translateX(-10%);
+  }
 }
 
 .slide1 .description button {
@@ -228,37 +309,86 @@
   animation-timing-function: ease-out;
 }
 
-nav {
+.nav_container ul {
   display: none;
+  padding-top: 30px;
+}
+
+@media (min-width: 1000px) {
+  .nav_container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.nav_container li {
+  list-style: none;
+}
+
+.nav_container a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_container a:hover {
+  color: white;
+}
+
+@media (min-width: 1000px) {
+  .nav_container a {
+    padding-left: 0.9375rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+.nav_container .active {
+  background-color: #93e4eb;
+  animation-name: shownav;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+}
+
+@media (min-width: 1000px) {
+  .nav_container .active {
+    border-radius: 3%;
+  }
+}
+
+.nav_container.nav_active ul {
+  display: block;
   width: 240px;
-  min-height: 50%;
+  min-height: 50vh;
   background-color: #0a7a85;
   position: absolute;
   margin-left: 0rem;
   margin-top: 2rem;
   margin-bottom: 0rem;
   margin-right: 10rem;
-  padding-top: 25px;
   z-index: 100;
-}
-
-nav ul {
+  animation-name: shownav;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
   text-align: center;
   padding: 0px;
 }
 
-nav ul li {
+.nav_container.nav_active li {
   list-style: none;
+  animation-name: shownav;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
 }
 
-nav a {
+.nav_container.nav_active a {
   margin-top: 25px;
   display: block;
   text-decoration: none;
   color: white;
   padding-left: 0rem;
-  padding-top: 0rem;
-  padding-bottom: 1.25rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   padding-right: 0rem;
 }
 
@@ -268,6 +398,17 @@ nav a {
   }
   to {
     transform: translateX(70%);
+  }
+}
+
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -305,9 +446,66 @@ nav a {
   color: #93e4eb;
 }
 
-main {
+@keyframes btn_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(70%);
+  }
+}
+
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.skill {
   width: 100vw;
   height: 100vh;
+  background-color: #929d9e;
+}
+
+.skill .skills_features {
+  background-color: white;
+  height: 400px;
+  margin: 25% 0% 0% 0%;
+  background-color: #f3f3f3;
+}
+
+.skill .skills_features .color {
+  background-color: #0a7a85;
+}
+
+.skill .skills_features .outerstar {
+  position: relative;
+}
+
+.skill .skills_features .outerstar::before {
+  content: '\f005 \f005 \f005 \f005 \f005';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.skill .skills_features .innerstar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 60px;
+}
+
+.skill .skills_features .innerstar::before {
+  content: '\f005 \f005 \f005 \f005 \f005';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #93e4eb;
 }
 
 main header {
@@ -324,47 +522,81 @@ main header {
 }
 
 main header .logo {
-  padding-left: 0.625rem;
-  padding-top: 0.625rem;
+  padding-left: 0.125rem;
+  padding-top: 0.9375rem;
   padding-bottom: 0.375rem;
   padding-right: 0rem;
 }
 
+@media (min-width: 320px) {
+  main header .logo {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 375px) {
+  main header .logo {
+    padding-top: 0.9rem;
+  }
+}
+
 main header .logo img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 5px;
   border-radius: 50%;
   background-color: #929d9e;
 }
 
+@media (min-width: 375px) {
+  main header .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 main header .logo span {
   color: #86fce8;
+  font-size: 15px;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 375px) {
   main header .logo span {
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
   }
 }
 
-@media (min-width: 900px) {
-  span main header .logo span::after {
-    content: '\f0c9';
-    font-weight: 900;
-    font-family: 'Font Awesome 5 Free';
-    float: right;
-    color: white;
-    margin-left: 0rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0rem;
-    margin-right: 0.6rem;
-    padding-left: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-right: 0.5rem;
-    background-color: #93e4eb;
-    border-radius: 5%;
+main header .logo .menu_icon {
+  float: right;
+  color: #0a7a85;
+  margin-left: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  margin-right: 0.6rem;
+  padding-left: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.5rem;
+  background-color: #93e4eb;
+  border-radius: 5%;
+}
+
+@media (min-width: 1000px) {
+  main header .logo .menu_icon {
+    display: none;
   }
+}
+
+main .slider_wrapper {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+main .slide {
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }

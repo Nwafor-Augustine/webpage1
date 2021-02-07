@@ -9,13 +9,32 @@ let links2 = document.querySelector(".link2")
 let listItem2 = document.querySelectorAll(".link_item2")
 const subTitle = document.querySelector(".subtitle")
 let animate_btn = document.querySelector(".animate_btn")
+const menu = document.querySelector(".menu_icon")
+let container=document.querySelector(".nav_container")
 let currentpage = 0;
+let currentState = 0;
+console.log(btn)
  
  
 
 
-//menu bar
+//show navigation menu
+function showMenu() {
+    currentState++
+    if (currentState >= 2) {
+        currentState = 0;
+    }
 
+    if (currentState === 1) {
+          container.classList.add("nav_active")
+    } else {
+           container.classList.remove("nav_active")
+    }
+    
+}
+
+
+menu.addEventListener("click",showMenu)
 
 
 
@@ -26,7 +45,6 @@ let currentpage = 0;
 function setPosition(sections) {
 
     sections.forEach((item, index) => {
-        console.log(index)
         item.style.transform = `translateX(${index * 100}%)`
 
     })
@@ -38,7 +56,7 @@ setPosition(homeslide)
 function showslide(parentslider, page) {
 
     parentslider.style.left = `-${page * 100}%`
-    return homeslide[page].className;
+    
 
 }
 
