@@ -3,18 +3,12 @@
 
 .skill {
 	width: 100vw;
-	height: 100vh;
-	background-color: $primary-color1;
-
+	height: 80vh;
+	padding: 12.5% 0% 12.5% 0%;
+	background-color: #f3f3ff;
 	.skills_features {
-		background-color: white;
 		height: 400px;
-		margin: 25% 0% 0% 0%;
-		background-color: #f3f3f3;
 
-		table {
-			color: $primary-color;
-		}
 		.outerstar {
 			position: relative;
 			&::before {

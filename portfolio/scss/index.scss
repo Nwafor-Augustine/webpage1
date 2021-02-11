@@ -10,9 +10,7 @@ main {
 		@include size(100vw, 10vh);
 		z-index: 100;
 		background-color: $primary-color;
-		@include mobile(200) {
-			position: fixed;
-		}
+		position: fixed;
 		.logo {
 			@include padding(15, 0, 6, 2, rem);
 

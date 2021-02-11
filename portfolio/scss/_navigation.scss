@@ -5,11 +5,12 @@
 .nav_container {
 	ul {
 		display: none;
-		padding-top: 30px;
-
+		transition: 0.4;
 		@include mobile(1000) {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			padding-top: 30px;
+			width: 90%;
 		}
 	}
 
@@ -24,7 +25,7 @@
 			color: white;
 		}
 		@include mobile(1000) {
-			@include padding(5, 15, 5, 15, rem);
+			@include padding(5, 10, 5, 10, rem);
 		}
 	}
 	.active {

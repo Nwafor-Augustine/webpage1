@@ -3,16 +3,16 @@ let sliderwrapper = document.querySelector(".slide")
 let btn = document.querySelector(".btn");
 let btn2 = document.querySelector(".btn7");
 let btn3 = document.querySelector(".btn6");
-let links = document.querySelector(".link")
 let listItem = document.querySelectorAll(".link_item")
-let links2 = document.querySelector(".link2")
-let listItem2 = document.querySelectorAll(".link_item2")
 const subTitle = document.querySelector(".subtitle")
 let animate_btn = document.querySelector(".animate_btn")
 const menu = document.querySelector(".menu_icon")
 let container=document.querySelector(".nav_container")
+
+const targetObserver = document.querySelector(".observe")
 let currentpage = 0;
 let currentState = 0;
+let check = true;
 console.log(btn)
  
  
@@ -37,10 +37,39 @@ function showMenu() {
 menu.addEventListener("click",showMenu)
 
 
+//observer for Header positioning
+
+
+const option = {
+ 
+ 
+   threshold:[.7]
+    
+}
+
+let headerPosition = (e, t) => {
+  
+    
+  
+    if (e[0].isIntersecting) {
+        document.querySelector(".navigation_button").classList.add("position")
+     check= true
+    } else {
+        document.querySelector(".navigation_button").classList.remove("position")
+        check = false
+    }
+           
+   
+   console.log(check)
+    console.log(e,t)
+}
+
+let observer = new IntersectionObserver(headerPosition, option)
+
+observer.observe(targetObserver )
 
 
 
-// position sliders
 
 function setPosition(sections) {
 
@@ -119,8 +148,8 @@ setInterval(() => {
 
 function checkNavLink1() {
     listItem[0].className = "link_item active"
-
-    links.addEventListener("click", (e) => {
+    listItem.forEach((item) => {
+    item.addEventListener("click",(e) => {
 
         listItem.forEach((item,index) => {
             item.classList.remove("active")
@@ -131,6 +160,8 @@ function checkNavLink1() {
 
         generateSubTitle(text, creatSubTitle);
     })
+})
+
 }
 checkNavLink1()
 //nav checkfuntion2....

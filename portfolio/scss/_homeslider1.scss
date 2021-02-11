@@ -78,12 +78,17 @@
 					transform: translateX(-10%);
 				}
 			}
+
+			&.position {
+				opacity: 0;
+			}
 		}
 
 		button {
 			background-color: $primary-color;
-			@include size(100px, 60px);
+			@include size(60px, 60px);
 			color: $btncolor;
+			border-radius: 50%;
 		}
 
 		.animate_btn.shift {
