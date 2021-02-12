@@ -85,6 +85,8 @@ setPosition(homeslide)
 function showslide(parentslider, page) {
 
     parentslider.style.left = `-${page * 100}%`
+    parentslider.style.top = "0%"
+     parentslider.style.bottom = "0%"
     
 
 }

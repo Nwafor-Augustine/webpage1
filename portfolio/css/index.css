@@ -155,39 +155,92 @@
   animation-timing-function: ease-out;
 }
 
+@keyframes btn_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(40%);
+  }
+}
+
+@keyframes shownav {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 .slide2 {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #f3f3f3;
+  background-color: #929d9e;
+}
+
+.slide2 .about {
+  padding-top: 6%;
 }
 
 .slide2 .about_inner {
+  padding-top: 5%;
+}
+
+.slide2 .about_inner img {
   border-radius: 50%;
-  margin-top: 10vh;
-  height: 200px;
-  width: 200px;
+  margin-top: 12vh;
   transform: translateX(10%);
 }
 
+@media (min-width: 200px) {
+  .slide2 .about_inner img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .slide2 .about_inner img {
+    margin-top: 12vh;
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 300px) {
+  .slide2 .about_inner img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 600px) {
+  .slide2 .about_inner img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 900px) {
+  .slide2 .about_inner img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
 .slide2 .design_color {
+  display: block;
   height: 1px;
-  width: 95%;
-  background-color: #0a7a85;
-  display: inline-block;
-}
-
-.slide2 .table {
   width: 100%;
+  background-color: #0a7a85;
 }
 
-.slide2 .table .title {
-  float: right;
-  color: #0a7a85;
-}
-
-.slide2 .table .text {
-  font-size: 16px;
+.slide2 .title {
+  color: #93e4eb;
 }
 
 @keyframes btn_animate {
@@ -510,7 +563,7 @@
   width: 100vw;
   height: 80vh;
   padding: 12.5% 0% 12.5% 0%;
-  background-color: #f3f3ff;
+  background-color: #0a7a85;
 }
 
 .skill .skills_features {
