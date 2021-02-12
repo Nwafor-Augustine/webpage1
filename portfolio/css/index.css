@@ -278,6 +278,7 @@
   height: 60px;
   color: #93e4eb;
   border-radius: 50%;
+  border: none;
 }
 
 .slide2 .animate_btn.shift1 {
