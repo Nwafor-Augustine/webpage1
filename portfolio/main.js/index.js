@@ -1,11 +1,10 @@
 let homeslide = document.querySelectorAll(".home")
 let sliderwrapper = document.querySelector(".slide")
 let btn = document.querySelector(".btn");
-let btn2 = document.querySelector(".btn7");
-let btn3 = document.querySelector(".btn6");
+let btn2 = document.querySelector(".btn2");
 let listItem = document.querySelectorAll(".link_item")
 const subTitle = document.querySelector(".subtitle")
-let animate_btn = document.querySelector(".animate_btn")
+let animate_btn = document.querySelectorAll(".animate_btn")
 const menu = document.querySelector(".menu_icon")
 let container=document.querySelector(".nav_container")
 const stars = document.querySelectorAll(".innerstar")
@@ -164,11 +163,13 @@ function decreaseSlide() {
 //btn event handler
 
 btn.addEventListener("click", increaseSlide)
+btn2.addEventListener("click", increaseSlide)
 
 //animate button
 
 setInterval(() => {
-    animate_btn.classList.toggle("shift");
+    animate_btn[0].classList.toggle("shift");
+    animate_btn[1].classList.toggle("shift1");
 },1000)
 
 // btn2.addEventListener("click", increaseSlide)

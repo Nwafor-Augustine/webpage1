@@ -3,22 +3,23 @@
 
 .skill {
 	width: 100vw;
-	height: 80vh;
+	height: 670px;
 	padding: 12.5% 0% 12.5% 0%;
-	background-color: #0a7a85;
+	background-color: $btncolor;
+
 	.table {
-		color: $btncolor;
+		color: #0a7a85;
 	}
 	.skills_features {
-		height: 400px;
-
+		width: 100%;
 		.outerstar {
 			position: relative;
 			&::before {
 				content: '\f005 \f005 \f005 \f005 \f005 \f005';
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
-				color: gainsboro;
+				color: $primary-color;
+				opacity: 0.5;
 			}
 		}
 
@@ -32,7 +33,7 @@
 				content: '\f005 \f005 \f005 \f005 \f005 \f005';
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
-				color: yellow;
+				color: green;
 			}
 		}
 	}

@@ -2,15 +2,17 @@
 @import 'settings';
 
 .slide2 {
-	width: 100%;
-	min-height: 100%;
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
 	background-color: $primary-color1;
-	.about {
-		padding: 5% 0%;
-	}
+
 	.about_inner {
 		padding-top: 15vh;
+		padding-bottom: 2vh;
+		@include mobile(1000) {
+			padding-top: 2vh;
+		}
 		img {
 			@include mobile(200) {
 				height: 80px;
@@ -46,5 +48,16 @@
 
 	.title {
 		color: $btncolor;
+	}
+
+	button {
+		background-color: $primary-color;
+		@include size(60px, 60px);
+		color: $btncolor;
+		border-radius: 50%;
+	}
+
+	.animate_btn.shift1 {
+		@include animate(btn1_animate, 0.9s, ease-out);
 	}
 }

@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
 @keyframes shownav {
   from {
     transform: translateX(-100px);
@@ -27,6 +36,15 @@
   }
 }
 
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
 @keyframes shownav {
   from {
     transform: translateX(-100px);
@@ -39,8 +57,8 @@
 }
 
 .slide1 {
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,6 +182,15 @@
   }
 }
 
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
 @keyframes shownav {
   from {
     transform: translateX(-100px);
@@ -176,18 +203,21 @@
 }
 
 .slide2 {
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background-color: #929d9e;
 }
 
-.slide2 .about {
-  padding: 5% 0%;
-}
-
 .slide2 .about_inner {
   padding-top: 15vh;
+  padding-bottom: 2vh;
+}
+
+@media (min-width: 1000px) {
+  .slide2 .about_inner {
+    padding-top: 2vh;
+  }
 }
 
 .slide2 .about_inner img {
@@ -242,12 +272,35 @@
   color: #93e4eb;
 }
 
+.slide2 button {
+  background-color: #0a7a85;
+  width: 60px;
+  height: 60px;
+  color: #93e4eb;
+  border-radius: 50%;
+}
+
+.slide2 .animate_btn.shift1 {
+  animation-name: btn1_animate;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+}
+
 @keyframes btn_animate {
   from {
     transform: translateX(0%);
   }
   to {
     transform: translateX(40%);
+  }
+}
+
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
   }
 }
 
@@ -268,6 +321,15 @@
   }
   to {
     transform: translateX(40%);
+  }
+}
+
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
   }
 }
 
@@ -283,8 +345,8 @@
 }
 
 .slide1 {
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -408,8 +470,14 @@
   .nav_container ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding-top: 30px;
+    padding-top: 25px;
     width: 90%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .nav_container ul {
+    padding-top: 30px;
   }
 }
 
@@ -424,6 +492,7 @@
 
 .nav_container a:hover {
   color: white;
+  transition: 2s;
 }
 
 @media (min-width: 1000px) {
@@ -436,6 +505,7 @@
 }
 
 .nav_container .active {
+  color: #0a7a85;
   background-color: #93e4eb;
   animation-name: shownav;
   animation-duration: 0.1s;
@@ -493,6 +563,15 @@
   }
 }
 
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
 @keyframes shownav {
   from {
     transform: translateX(-100px);
@@ -547,6 +626,15 @@
   }
 }
 
+@keyframes btn1_animate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
 @keyframes shownav {
   from {
     transform: translateX(-100px);
@@ -560,17 +648,17 @@
 
 .skill {
   width: 100vw;
-  height: 80vh;
+  height: 670px;
   padding: 12.5% 0% 12.5% 0%;
-  background-color: #0a7a85;
+  background-color: #93e4eb;
 }
 
 .skill .table {
-  color: #93e4eb;
+  color: #0a7a85;
 }
 
 .skill .skills_features {
-  height: 400px;
+  width: 100%;
 }
 
 .skill .skills_features .outerstar {
@@ -581,7 +669,8 @@
   content: '\f005 \f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: gainsboro;
+  color: #0a7a85;
+  opacity: 0.5;
 }
 
 .skill .skills_features .innerstar {
@@ -596,7 +685,11 @@
   content: '\f005 \f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: yellow;
+  color: green;
+}
+
+main {
+  overflow: hidden;
 }
 
 main header {
@@ -607,11 +700,23 @@ main header {
   position: fixed;
 }
 
+@media (min-width: 1023px) {
+  main header {
+    height: 13vh;
+  }
+}
+
 main header .logo {
   padding-left: 0.125rem;
   padding-top: 0.9375rem;
   padding-bottom: 0.375rem;
   padding-right: 0rem;
+}
+
+@media (min-width: 1023px) {
+  main header .logo {
+    padding-top: 0px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -642,7 +747,7 @@ main header .logo img {
 }
 
 main header .logo span {
-  color: #86fce8;
+  color: white;
   font-size: 15px;
 }
 
@@ -678,9 +783,9 @@ main header .logo .menu_icon:hover {
 }
 
 main .slider_wrapper {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 main .slide {

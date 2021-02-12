@@ -6,14 +6,20 @@
 @import 'profile';
 @import 'skills_page';
 main {
+	overflow: hidden;
 	header {
 		@include size(100vw, 10vh);
+		@include mobile(1023) {
+			height: 13vh;
+		}
 		z-index: 100;
 		background-color: $primary-color;
 		position: fixed;
 		.logo {
 			@include padding(15, 0, 6, 2, rem);
-
+			@include mobile(1023) {
+				padding-top: 0px;
+			}
 			@include mobile(320) {
 				padding-top: 1rem;
 			}
@@ -32,13 +38,11 @@ main {
 				}
 			}
 			span {
-				color: rgb(134, 252, 232);
+				color: white;
 				font-size: 15px;
 
 				@include mobile(375) {
 					font-size: 18px;
-				}
-				@include mobile(900) {
 				}
 			}
 
@@ -59,8 +63,8 @@ main {
 		}
 	}
 	.slider_wrapper {
-		overflow: hidden;
 		@include size(100vw, 100vh);
+		overflow: hidden;
 	}
 	.slide {
 		@include size(100vw, 100vh);

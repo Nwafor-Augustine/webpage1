@@ -9,8 +9,11 @@
 		@include mobile(1000) {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-			padding-top: 30px;
+			padding-top: 25px;
 			width: 90%;
+		}
+		@include mobile(1300) {
+			padding-top: 30px;
 		}
 	}
 
@@ -23,12 +26,14 @@
 		color: white;
 		&:hover {
 			color: white;
+			transition: 2s;
 		}
 		@include mobile(1000) {
 			@include padding(5, 10, 5, 10, rem);
 		}
 	}
 	.active {
+		color: $primary-color;
 		background-color: $btncolor;
 		@include mobile(1000) {
 			border-radius: 3%;
