@@ -8,12 +8,39 @@ const subTitle = document.querySelector(".subtitle")
 let animate_btn = document.querySelector(".animate_btn")
 const menu = document.querySelector(".menu_icon")
 let container=document.querySelector(".nav_container")
-
+const stars = document.querySelectorAll(".innerstar")
 const targetObserver = document.querySelector(".observe")
 let currentpage = 0;
 let currentState = 0;
 let check = true;
-console.log(btn)
+
+
+
+// star rate
+
+let starRate = {
+    Html: 4.6,
+    CSS: 4.3,
+    scss: 4.1,
+    Javascript: 4.9,
+    Reactjs: 5.2,
+    Bootstrap: 5.1,
+    Git:5.5
+}
+
+let percentageOfStar = () => {
+let d,r
+for (r in starRate) {
+    d = Math.floor((starRate[r] / 6) * 100) 
+    
+    let e = document.querySelector(`.${r}`).style.width = `${d}px`;
+}
+    
+
+}
+    
+percentageOfStar()
+
  
  
 
@@ -53,9 +80,13 @@ let headerPosition = (e, t) => {
   
     if (e[0].isIntersecting) {
         document.querySelector(".navigation_button").classList.add("position")
+        document.querySelector("header").style.visibility="hidden"
+         
      check= true
     } else {
         document.querySelector(".navigation_button").classList.remove("position")
+        document.querySelector("header").style.visibility="visible"
+        
         check = false
     }
            
@@ -85,9 +116,6 @@ setPosition(homeslide)
 function showslide(parentslider, page) {
 
     parentslider.style.left = `-${page * 100}%`
-    parentslider.style.top = "0%"
-     parentslider.style.bottom = "0%"
-    
 
 }
 

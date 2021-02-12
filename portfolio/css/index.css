@@ -40,7 +40,7 @@
 
 .slide1 {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -177,22 +177,21 @@
 
 .slide2 {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: absolute;
   background-color: #929d9e;
 }
 
 .slide2 .about {
-  padding-top: 6%;
+  padding: 5% 0%;
 }
 
 .slide2 .about_inner {
-  padding-top: 5%;
+  padding-top: 15vh;
 }
 
 .slide2 .about_inner img {
   border-radius: 50%;
-  margin-top: 12vh;
   transform: translateX(10%);
 }
 
@@ -285,7 +284,7 @@
 
 .slide1 {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-image: url("/webpage1/portfolio/images/william-iven-gcsNOsPEXfs-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -566,6 +565,10 @@
   background-color: #0a7a85;
 }
 
+.skill .table {
+  color: #93e4eb;
+}
+
 .skill .skills_features {
   height: 400px;
 }
@@ -575,10 +578,10 @@
 }
 
 .skill .skills_features .outerstar::before {
-  content: '\f005 \f005 \f005 \f005 \f005';
+  content: '\f005 \f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: black;
+  color: gainsboro;
 }
 
 .skill .skills_features .innerstar {
@@ -586,11 +589,11 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  width: 60px;
+  width: 0px;
 }
 
 .skill .skills_features .innerstar::before {
-  content: '\f005 \f005 \f005 \f005 \f005';
+  content: '\f005 \f005 \f005 \f005 \f005 \f005';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: yellow;
@@ -675,15 +678,13 @@ main header .logo .menu_icon:hover {
 }
 
 main .slider_wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
 
 main .slide {
   width: 100vw;
-  height: 10vh;
-  position: relative;
-  width: 100vw;
   height: 100vh;
+  position: relative;
 }

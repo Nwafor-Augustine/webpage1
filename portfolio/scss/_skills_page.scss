@@ -6,16 +6,19 @@
 	height: 80vh;
 	padding: 12.5% 0% 12.5% 0%;
 	background-color: #0a7a85;
+	.table {
+		color: $btncolor;
+	}
 	.skills_features {
 		height: 400px;
 
 		.outerstar {
 			position: relative;
 			&::before {
-				content: '\f005 \f005 \f005 \f005 \f005';
+				content: '\f005 \f005 \f005 \f005 \f005 \f005';
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
-				color: black;
+				color: gainsboro;
 			}
 		}
 
@@ -24,9 +27,9 @@
 			top: 0;
 			left: 0;
 			overflow: hidden;
-			width: 60px;
+			width: 0px;
 			&::before {
-				content: '\f005 \f005 \f005 \f005 \f005';
+				content: '\f005 \f005 \f005 \f005 \f005 \f005';
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
 				color: yellow;
