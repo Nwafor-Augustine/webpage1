@@ -17,6 +17,7 @@ main {
 		background-color: $primary-color;
 		position: fixed;
 		.logo {
+			color: white;
 			@include padding(15, 0, 6, 2, rem);
 			@include mobile(1023) {
 				padding-top: 0px;
